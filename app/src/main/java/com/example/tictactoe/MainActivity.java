@@ -73,7 +73,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else {
             player1Turn = !player1Turn;
         }
-
     }
 
     private boolean checkForWin() {
