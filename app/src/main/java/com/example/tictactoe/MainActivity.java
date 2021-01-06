@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         textViewPlayer1 = findViewById(R.id.text_view_p1);
         textViewPlayer2 = findViewById(R.id.text_view_p2);
 
+
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 String buttonID = "button_" + i + j;
@@ -134,9 +135,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         resetBoard();
     }
 
-    private void updatePointsText() {
-        textViewPlayer1.setText("Player 1: " + player1Points);
-        textViewPlayer2.setText("Player 2: " + player2Points);
+    private void updatePointsText()
+    {
+        String name1 = getIntent().getStringExtra("name1");
+        String name2 = getIntent().getStringExtra("name2");
+        textViewPlayer1.setText(name1+":" + player1Points);
+        textViewPlayer2.setText(name2+":" + player2Points);
     }
 
     private void resetBoard() {
